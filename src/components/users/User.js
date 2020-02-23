@@ -55,7 +55,7 @@ class User extends Component {
             <img
               src={avatar_url}
               className='round-img'
-              alt="{name}'s Photo"
+              alt='{name}'
               style={{ width: '150px' }}
             />
             <h1>{name}</h1>
@@ -68,7 +68,7 @@ class User extends Component {
                 <p>{bio}</p>
               </Fragment>
             )}
-            <a href='html_url' className='btn btn-dark my-1'>
+            <a href={html_url} className='btn btn-dark my-1'>
               Visit Github Profile
             </a>
             <ul>
