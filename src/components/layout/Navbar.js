@@ -4,25 +4,24 @@ import { Link } from 'react-router-dom';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className='navbar bg-primary'>
-      <h1>
-        <i className={icon}></i>
+    <header className='flex-col px-6 bg-gray-900 flex items-center lg:py-0 py-2'>
+      <div className='items-center text-3xl text-green-500 font-semibold pb-1'>
         {title}
-      </h1>
-      <ul>
-        <li>
+      </div>
+      <div className='flex'>
+        <p className='px-10 text-green-200 hover:text-green-500'>
           <Link to='/'>Home</Link>
-        </li>
-        <li>
+        </p>
+        <p className='px-10 text-green-200 hover:text-green-500'>
           <Link to='/about'>About</Link>
-        </li>
-      </ul>
-    </nav>
+        </p>
+      </div>
+    </header>
   );
 };
 
 Navbar.defaultProps = {
-  title: ' Github Finder',
+  title: 'Github.find(dev)',
   icon: 'fab fa-github'
 };
 
