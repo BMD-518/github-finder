@@ -21,11 +21,13 @@ const Search = () => {
   const onChange = e => setText(e.target.value);
 
   return (
-    <div className='text-center bg-gray-900 m-5 py-3 rounded-lg border-green-500 border-4 shadow-lg'>
-      <div className='p-1 text-green-200 pb-5 text-lg tracking-wide'>
+    <div className='text-center bg-gray-900 m-5 py-3 rounded-lg shadow-lg'>
+      <div className='p-1 text-green-200 pb-5  text-lg tracking-wide'>
         Search for{' '}
-        <span className='text-2xl text-orange-400 underline'>any</span> github
-        user!
+        <span className='text-2xl mx-1 text-orange-400 underline tracking-widest'>
+          any
+        </span>{' '}
+        github user!
       </div>
       <form onSubmit={onSubmit} action='' className='flex-col'>
         <input
@@ -40,13 +42,13 @@ const Search = () => {
         />
         <div className='py-2 my-3 flex flex-row justify-center'>
           <input
-            className='rounded-sm focus:outline-none hover:bg-green-500 hover:text-green-800 mx-1 w-16 py-1 bg-gray-700 text-green-500'
+            className='rounded-sm border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 mx-1 w-16 py-1 bg-gray-700 text-green-500 uppercase font-bold'
             type='submit'
-            value='Enter'
+            value='search'
           />
           {githubContext.users.length > 0 && (
             <button
-              className='rounded-sm focus:outline-none mx-1 w-16 py-1 bg-red-700 text-gray-400'
+              className='rounded-sm focus:outline-none hover:bg-orange-400 hover:text-red-800 mx-1 w-16 py-1 bg-red-700 text-orange-400 border-b-2 border-orange-400 uppercase font-bold'
               onClick={githubContext.clearUsers}
             >
               Clear
