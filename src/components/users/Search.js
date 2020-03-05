@@ -36,19 +36,19 @@ const Search = () => {
           type='text'
           name='text'
           autoComplete='off'
-          placeholder='Search Users'
+          placeholder='Search User'
           value={text}
           onChange={onChange}
         />
         <div className='py-2 my-3 flex flex-row justify-center'>
           <input
-            className='rounded-sm border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 mx-1 w-16 py-1 bg-gray-700 text-green-500 uppercase font-bold'
+            className='rounded-sm border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-gray-700 mx-1 w-20 py-1 bg-gray-700 text-green-500 uppercase font-bold'
             type='submit'
             value='search'
           />
           {githubContext.users.length > 0 && (
             <button
-              className='rounded-sm focus:outline-none hover:bg-orange-400 hover:text-red-800 mx-1 w-16 py-1 bg-red-700 text-orange-400 border-b-2 border-orange-400 uppercase font-bold'
+              className='rounded-sm focus:outline-none hover:bg-orange-400 hover:text-red-800 mx-1 w-20 py-1 bg-red-700 text-orange-400 border-b-2 border-orange-400 uppercase font-bold'
               onClick={githubContext.clearUsers}
             >
               Clear
