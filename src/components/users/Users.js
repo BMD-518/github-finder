@@ -12,7 +12,7 @@ const Users = () => {
     return <Spinner />;
   } else {
     return (
-      <div className='grid md:grid-cols-2 gap-4'>
+      <div className='grid md:grid-cols-2 xl:grid-cols-3 gap-4'>
         {users.map(user => (
           <UserItem key={user.id} user={user} />
         ))}
