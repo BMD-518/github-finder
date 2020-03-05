@@ -15,7 +15,7 @@ const App = () => {
     <GithubState>
       <AlertState>
         <Router>
-          <div className='App'>
+          <div className='App antialiased text-gray-900'>
             <Navbar />
             <div className='mx-2 sm:mx-20 md:mx-24'>
               <Alert />
