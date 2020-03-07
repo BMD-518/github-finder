@@ -35,68 +35,128 @@ const User = ({ match }) => {
 
   return (
     <Fragment>
-      <Link to='/' className='btn btn-light'>
+      <Link
+        to='/'
+        className='flex justify-center rounded-sm my-5 py-2 px-4 font-semibold border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 hover:border-t- bg-gray-900 text-green-500 uppercase'
+      >
         Back to Search
       </Link>
-      Hireable:{' '}
-      {hireable ? (
-        <i className='fas fa-check text-success' />
-      ) : (
-        <i className='fas fa-times-circle' />
-      )}
-      <div className='card grid-2'>
-        <div className='all-center'>
-          <img
-            src={avatar_url}
-            className='round-img'
-            alt='{name}'
-            style={{ width: '150px' }}
-          />
-          <h1>{name}</h1>
-          <p>Location: {location}</p>
+      <p className='my-3 font-semibold text-center'>
+        Hireable:{' '}
+        {hireable ? (
+          <i className='fas fa-check text-green-300' />
+        ) : (
+          <i className='fas fa-times-circle text-red-300' />
+        )}
+      </p>
+      <div className='bg-gray-800 p-3 py-5 rounded-lg'>
+        <div className='flex flex-col sm:flex-row sm:justify-around'>
+          <div className='flex flex-wrap justify-center'>
+            <img
+              src={avatar_url}
+              className='w-40 mb-3 rounded-full border-green-400 border-4 shadow-xl'
+              alt='{name}'
+            />
+          </div>
+          <div className='flex flex-col justify-center'>
+            <p className='text-center text-base text-gray-600 font-semibold'>
+              Location:{' '}
+              <span className='text-green-500 text-lg font-medium'>
+                {location}
+              </span>
+            </p>
+            <h1 className='text-center mb-3 text-3xl font-extrabold tracking-wide text-green-600'>
+              {name}
+            </h1>
+          </div>
         </div>
         <div>
-          {bio && (
-            <Fragment>
-              <h3>Bio</h3>
-              <p>{bio}</p>
-            </Fragment>
-          )}
-          <a href={html_url} className='btn btn-dark my-1'>
-            Visit Github Profile
+          <div className='bg-gray-600 rounded-md p-2 my-1'>
+            {bio && (
+              <Fragment>
+                <h3 className='text-base text-green-500 tracking-wide font-light'>
+                  Bio:{' '}
+                  <span className='text-lg text-gray-900 tracking-normal font-medium'>
+                    {bio}
+                  </span>
+                </h3>
+              </Fragment>
+            )}
+          </div>
+          <a
+            href={html_url}
+            className='flex justify-center rounded-sm my-5 py-2 px-4 font-semibold border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 bg-gray-700 text-green-500 uppercase'
+          >
+            View On Github
           </a>
-          <ul>
+          <ul className='flex flex-col flex-wrap text-center'>
             <li>
               {login && (
                 <Fragment>
-                  <strong>Username: </strong> {login}
+                  <p className='text-base text-green-400 font-light'>
+                    Username: <span className='text-gray-500'>{login}</span>
+                  </p>
                 </Fragment>
               )}
             </li>
             <li>
               {company && (
                 <Fragment>
-                  <strong>Company: </strong> {company}
+                  <p className='text-base text-green-400 font-light'>
+                    Company: <span className='text-gray-500'>{company}</span>
+                  </p>
                 </Fragment>
               )}
             </li>
             <li>
               {blog && (
                 <Fragment>
-                  <strong>Blog: </strong> {blog}
+                  <p className='text-base text-green-400 font-light'>
+                    Blog: <span className='text-gray-500'>{blog}</span>
+                  </p>
                 </Fragment>
               )}
             </li>
           </ul>
         </div>
       </div>
-      <div className='card text-center'>
-        <div className='badge badge-primary'>Followers: {followers}</div>
-        <div className='badge badge-success'>Following: {following}</div>
-        <div className='badge badge-light'>Public Repos {public_repos}</div>
-        <div className='badge badge-dark'>Public Gists: {public_gists}</div>
+      <div className='flex flex-col bg-gray-900 p-3 rounded-md text-center my-3'>
+        <h2 className='mb-3 text-green-300 font-thin text-2xl uppercase'>
+          {login}'s Stats
+        </h2>
+        <div className='flex flex-col'>
+          <div className='p-1 flex flex-row justify-center'>
+            <div className='font-thin text-green-300 text-lg rounded-md m-1 px-1'>
+              Followers:{' '}
+              <span className='font-semibold text-green-200'>{followers}</span>
+            </div>
+            <div className='font-thin text-green-300 text-lg rounded-md m-1 px-1'>
+              Following:{' '}
+              <span className='font-semibold text-green-200'>{following}</span>
+            </div>
+          </div>
+          <div className='p-1 flex flex-row justify-center'>
+            <div className='font-thin text-green-300 text-lg rounded-md m-1 px-1'>
+              Public Repos:{' '}
+              <span className='font-semibold text-green-200'>
+                {public_repos}
+              </span>
+            </div>
+            <div className='font-thin text-green-300 text-lg rounded-md m-1 px-1'>
+              Public Gists:{' '}
+              <span className='font-semibold text-green-200'>
+                {public_gists}
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
-      <Repos repos={repos} />
+      <div className='bg-gray-900 rounded-md mb-5 py-2 px-3'>
+        <h1 className='uppercase text-2xl font-thin text-center text-green-300 mb-2'>
+          {login}'s Repos
+        </h1>
+        <Repos repos={repos} />
+      </div>
     </Fragment>
   );
 };
