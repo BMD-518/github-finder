@@ -85,6 +85,8 @@ const User = ({ match }) => {
           </div>
           <a
             href={html_url}
+            target='_blank'
+            rel='noopener noreferrer'
             className='flex justify-center rounded-sm my-5 py-2 px-4 font-semibold border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 bg-gray-700 text-green-500 uppercase'
           >
             View On Github
