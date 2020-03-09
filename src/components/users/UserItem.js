@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const UserItem = ({ user: { login, avatar_url, html_url } }) => {
+const UserItem = ({ user: { login, avatar_url } }) => {
   return (
     <div className='bg-gray-800 sm:hover:bg-gray-600 p-5 mb-3 shadow-2xl flex rounded-md'>
       <div className='flex-row'>
