@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const Navbar = ({ icon, title }) => {
   return (
     <Fragment>
-      <header className='flex-col px-6 bg-gray-900 flex items-center lg:py-2 py-4'>
+      <header className='flex-col px-6 bg-gray-900 flex items-center lg:py-2 py-4 shadow-lg'>
         <div className='items-center text-3xl text-green-500 font-semibold pb-1 tracking-widest'>
           {title}
         </div>
