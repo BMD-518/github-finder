@@ -41,12 +41,46 @@ const User = ({ match }) => {
       >
         Back to Search
       </Link>
-      <p className='my-3 font-semibold text-center'>
+      <p className='my-3 flex justify-center font-thin text-xl text-gray-400 leading-10'>
         Hireable:{' '}
         {hireable ? (
-          <i className='fas fa-check text-green-300' />
+          <svg
+            viewBox='0 0 578 429'
+            xmlns='http://www.w3.org/2000/svg'
+            fillRule='evenodd'
+            clipRule='evenodd'
+            strokeLinejoin='round'
+            strokeMiterlimit={2}
+            className='w-12'
+          >
+            <path
+              fill='#38a169'
+              d='M61.283 188.476l56.838-50.828 166.335 186.006-56.838 50.827z'
+            />
+            <path
+              fill='#69d391'
+              d='M471.793 53.517l50.923 56.915-295.073 264.006-50.924-56.916z'
+            />
+          </svg>
         ) : (
-          <i className='fas fa-times-circle text-red-300' />
+          <svg
+            viewBox='0 0 578 429'
+            xmlns='http://www.w3.org/2000/svg'
+            fillRule='evenodd'
+            clipRule='evenodd'
+            strokeLinejoin='round'
+            strokeMiterlimit={2}
+            className='w-12'
+          >
+            <path
+              fill='#f6ad56'
+              d='M179.015 47.012l-54.003 54.003 279.97 279.97 54.003-54.003z'
+            />
+            <path
+              fill='#c53030'
+              d='M404.985 47.012l54.003 54.003-279.97 279.97-54.003-54.003z'
+            />
+          </svg>
         )}
       </p>
       <div className='bg-gray-800 p-3 py-5 rounded-lg'>
