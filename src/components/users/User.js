@@ -54,7 +54,7 @@ const User = ({ match }) => {
           <div className='flex flex-wrap justify-center'>
             <img
               src={avatar_url}
-              className='w-40 mb-3 rounded-full border-green-400 border-4 shadow-xl'
+              className='mb-3 rounded-full border-green-400 border-4 shadow-xl'
               alt='{name}'
             />
           </div>
