@@ -13,10 +13,8 @@
     "react-scripts": "^3.4.0",
     "tailwindcss": "^1.2.0"
   },
-  "resolutions": {
-    "acorn": "^7.1.1"
-  },
   "scripts": {
+    "prebuild": "NODE_ENV=production yarn build:style",
     "build:style": "tailwind build src/styles/tailwind.css -o src/styles/index.css",
     "start": "npm run build:style && react-scripts start",
     "build": "react-scripts build",
@@ -39,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.4",
     "postcss-cli": "^7.1.0"
   }
