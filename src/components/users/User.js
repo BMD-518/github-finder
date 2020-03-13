@@ -93,12 +93,16 @@ const User = ({ match }) => {
             />
           </div>
           <div className='flex flex-col justify-center'>
-            <p className='text-center text-base text-gray-600 font-semibold'>
-              Location:{' '}
-              <span className='text-green-500 text-lg font-medium'>
-                {location}
-              </span>
-            </p>
+            {location && (
+              <Fragment>
+                <p className='text-center text-base text-gray-600 font-semibold'>
+                  Location:{' '}
+                  <span className='text-green-500 text-lg font-medium'>
+                    {location}
+                  </span>
+                </p>
+              </Fragment>
+            )}
             <h1 className='text-center mb-3 text-3xl font-extrabold tracking-wide text-green-600'>
               {name}
             </h1>
