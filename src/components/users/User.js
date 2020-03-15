@@ -41,7 +41,7 @@ const User = ({ match }) => {
       >
         Back to Search
       </Link>
-      <p className='my-3 flex justify-center font-thin text-xl text-gray-400 leading-10'>
+      <p className='my-3 flex justify-center items-center font-thin text-xl text-gray-400 leading-10'>
         Hireable:{' '}
         {hireable ? (
           <svg
@@ -51,7 +51,7 @@ const User = ({ match }) => {
             clipRule='evenodd'
             strokeLinejoin='round'
             strokeMiterlimit={2}
-            className='w-12'
+            className='w-12 h-12'
           >
             <path
               fill='#38a169'
@@ -70,7 +70,7 @@ const User = ({ match }) => {
             clipRule='evenodd'
             strokeLinejoin='round'
             strokeMiterlimit={2}
-            className='w-12'
+            className='w-12 h-12'
           >
             <path
               d='M151.883 127.886a37.999 37.999 0 010-53.74l25.435-25.436a2.401 2.401 0 013.394 0l251.404 251.403a37.999 37.999 0 010 53.74l-25.436 25.435a2.4 2.4 0 01-3.395 0L151.883 127.886z'
