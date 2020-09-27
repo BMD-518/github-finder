@@ -103,13 +103,13 @@ const User = ({ match }) => {
                 </p>
               </Fragment>
             )}
-            <h1 className='text-center mb-3 text-3xl font-extrabold tracking-wide text-green-600'>
+            <h1 className='text-center mb-3 text-3xl font-extrabold tracking-wide text-green-600 md:text-4xl lg:text-6xl'>
               {name}
             </h1>
           </div>
         </div>
-        <div>
-          <div className='bg-gray-600 rounded-md p-2 my-1'>
+        <div className='md:flex'>
+          <div className='flex bg-gray-600 rounded-md p-2 my-2 md:w-2/3'>
             {bio && (
               <Fragment>
                 <h3 className='text-base text-green-500 tracking-wide font-light'>
@@ -121,44 +121,46 @@ const User = ({ match }) => {
               </Fragment>
             )}
           </div>
-          <a
-            href={html_url}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='flex justify-center rounded-sm my-5 py-2 px-4 font-semibold border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 bg-gray-700 text-green-500 uppercase'
-          >
-            View On Github
-          </a>
-          <ul className='flex flex-col flex-wrap text-center'>
-            <li>
-              {login && (
-                <Fragment>
-                  <p className='text-base text-green-400 font-light'>
-                    Username: <span className='text-gray-500'>{login}</span>
-                  </p>
-                </Fragment>
-              )}
-            </li>
-            <li>
-              {company && (
-                <Fragment>
-                  <p className='text-base text-green-400 font-light'>
-                    Company: <span className='text-gray-500'>{company}</span>
-                  </p>
-                </Fragment>
-              )}
-            </li>
-            <li>
-              {blog && (
-                <Fragment>
-                  <p className='text-base text-green-400 font-light'>
-                    Blog: <span className='text-gray-500'>{blog}</span>
-                  </p>
-                </Fragment>
-              )}
-            </li>
-          </ul>
+          <div className='flex justify-center m-3'>
+            <ul className='flex flex-col flex-wrap text-center'>
+              <li>
+                {login && (
+                  <Fragment>
+                    <p className='text-base text-green-400 font-light'>
+                      Username: <span className='text-gray-500'>{login}</span>
+                    </p>
+                  </Fragment>
+                )}
+              </li>
+              <li>
+                {company && (
+                  <Fragment>
+                    <p className='text-base text-green-400 font-light'>
+                      Company: <span className='text-gray-500'>{company}</span>
+                    </p>
+                  </Fragment>
+                )}
+              </li>
+              <li>
+                {blog && (
+                  <Fragment>
+                    <p className='text-base text-green-400 font-light'>
+                      Blog: <span className='text-gray-500'>{blog}</span>
+                    </p>
+                  </Fragment>
+                )}
+              </li>
+            </ul>
+          </div>
         </div>
+        <a
+          href={html_url}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex justify-center rounded-sm my-5 py-2 px-4 font-semibold border-b-2 border-green-500 focus:outline-none hover:bg-green-500 hover:text-green-800 bg-gray-700 text-green-500 uppercase'
+        >
+          View On Github
+        </a>
       </div>
       <div className='flex flex-col bg-gray-900 p-3 rounded-md text-center my-3'>
         <h2 className='mb-3 text-green-300 font-thin text-2xl uppercase'>
